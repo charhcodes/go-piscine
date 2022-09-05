@@ -1,8 +1,3 @@
-./.git/hooks/applypatch-msg.sample
-./.git/objects/9f/a2b74b7da7b8c9aae31fb0e670f5fd1cdafa77
-./.git/objects/35/a14b3b4943e88fca917823574dec03d2950874
-./.git/objects/37/ae4a74cc10bdf49f4f703c86f83c34c7db311f
-./.git/objects/a9
-./.git/objects/ac
-./.git/objects/a2
-./.git/objects/18/a0684ea92f743036449de081ec3fc454cd963c
+find \(-iname "a*" \) -or \( -iname "*z" -and -type f \) -or \(-iname "z*" -and -type f -and -iname "*a!"\)
+
+
