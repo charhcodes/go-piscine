@@ -1,3 +1,3 @@
-find \(-iname "a*" \) -or \( -iname "*z" -and -type f \) -or \(-iname "z*" -and -type f -and -iname "*a!"\)
+find \( -iname "a*" \) -or \( -iname "*z" -and -type f \) -or \( -iname "z*" -and -type f -and -iname "*a!" \)'
 
 
