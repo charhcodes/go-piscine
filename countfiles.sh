@@ -1,1 +1,6 @@
-find -type f | wc -l 
+ls -l | grep -v ^l | wc -l 
+
+
+
+
+
