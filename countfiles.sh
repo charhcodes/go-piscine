@@ -1,4 +1,10 @@
-ls -l | grep -v ^l | wc -l 
+find \( -type f -or -type d \) | wc -l 
+
+
+
+
+
+
 
 
 
