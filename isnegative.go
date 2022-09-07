@@ -1,15 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+import "github.com/01-edu/z01"
 
 func main() {
 	integer := -5
 
 	if integer < 0 {
-		fmt.Println("T")
+		z01.PrintRune('T')
 	} else {
-		fmt.Println("F")
+		z01.PrintRune('F')
 	}
 }
