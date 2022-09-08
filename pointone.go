@@ -1,10 +1,10 @@
-package main
+package piscine
 
 import (
 	"fmt"
 )
 
-func main() {
+func PointOne(n *int) {
 	var n *int
 	n = &1
 
