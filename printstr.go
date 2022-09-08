@@ -6,7 +6,8 @@ func PrintStr(s string) {
 	s = "Hello World!"
 	bob := []rune(s)
 
-	for i := 0; i < len(bob); i++ {
+	var i rune
+	for i = 0; i < len(bob); i++ {
 		z01.PrintRune(bob[i])
 	}
 	z01.PrintRune('\n')
