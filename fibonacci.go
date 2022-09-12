@@ -7,7 +7,7 @@ func Fibonacci(index int) int {
 		return 1
 	} else {
 		var fib int
-		fib = fib(index-1) + fib(index-2)
+		fib = Fibonacci(index-1) + Fibonacci(index-2)
 		return fib
 	}
 }
