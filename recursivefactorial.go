@@ -10,4 +10,5 @@ func RecursiveFactorial(nb int) int {
 			return factorial
 		}
 	}
+	return
 }
