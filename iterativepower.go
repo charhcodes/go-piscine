@@ -8,18 +8,6 @@ func IterativePower(nb int, power int) int {
 		return 1
 	}
 	if nb < 0 {
-		result := 1
-		for power != 0 {
-			result *= nb
-			power -= 1
-		}
-		return result
-	} else {
-		result := 1
-		for power != 0 {
-			result *= nb
-			power -= 1
-		}
-		return result
+		return nb * IterativeFactorial(nb, power-1)
 	}
 }
