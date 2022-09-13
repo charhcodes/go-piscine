@@ -6,8 +6,8 @@ func AlphaCount(s string) int {
 		if ConvRune <= 65 && ConvRune > 91 || ConvRune <= 97 && ConvRune > 123 {
 			return ConvRune[i]
 		} else {
-			return
+			return ConvRune[i]
 		}
 	}
-	return
+	return len(ConvRune)
 }
