@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func NRune(s string, n int) rune {
 	ConvRune := []rune(s)
