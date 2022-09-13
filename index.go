@@ -5,6 +5,9 @@ func Index(s string, toFind string) int {
 	ChildString := []rune(toFind)
 	index := -1
 
+	if s == 0 || toFind == 0 {
+		return 0
+	}
 	for i := 0; i < len(ParentString); i++ {
 		if ChildString[0] == ParentString[i] {
 			index = i
