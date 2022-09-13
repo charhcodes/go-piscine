@@ -2,6 +2,7 @@ package piscine
 
 func FirstRune(s string) rune {
 	s = "Hello"
-	converted := []rune(s)
-	return converted[0]
+	ConvRune := []rune(s)
+	ConvString := string(ConvRune[0:1])
+	return ConvString
 }
