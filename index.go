@@ -5,18 +5,20 @@ func Index(s string, toFind string) int {
 	ChildString := []rune(toFind)
 	counter := 0
 
-	for i := 0; i > len(ParentString); i++ {
-		if ParentString[i] != ChildString[i] {
-			continue
+	if ParentString > 0 && ChildString > 0 && ChildString < ParentString {
+		for i := 0; i < len(ParentString); i++ {
+			if ParentString[i] != ChildString[i] {
+				continue
+			}
+			if ParentString[i] == ChildString[i] {
+				counter++
+			} else if ParentString[i] != ChildString[i] {
+				return counter
+			}
 		}
-		if ParentString[i] == ChildString[i] {
-			counter++
-		} else if ParentString[i] != ChildString[i] {
-			return counter
+		if counter == 0 {
+			return -1
 		}
-	}
-	if counter == 0 {
-		return -1
 	}
 	return
 }
