@@ -1,14 +1,17 @@
 package piscine
 
 func Compare(a, b string) int {
-	if len(a) == len(b) {
-		return 0
-	}
-	if len(a) > len(b) {
-		return 1
-	}
-	if len(a) < len(b) {
-		return -1
+	stringA := []rune(a)
+	stringB := []rune(b)
+	for i := 0; i < len(stringA); i++ {
+		if len(stringB) < i+1 {
+			return 1
+		}
+		if stringA[i] > stringB[i] {
+			return 1
+		} else if stringA[i] < stringB[i] {
+			return -1
+		}
 	}
 	return 0
 }
