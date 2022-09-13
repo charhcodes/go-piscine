@@ -5,7 +5,6 @@ func NRune(s string, n int) rune {
 		return 0
 	} else {
 		ConvRune := []rune(s)
-		newN := len(s) - n
-		return ConvRune[len(s)-newN]
+		return ConvRune[n]
 	}
 }
