@@ -2,12 +2,19 @@ package piscine
 
 func Index(s string, toFind string) int {
 	ParentString := []rune(s)
-	ChildString := []runes(toFind)
+	ChildString := []rune(toFind)
 	counter := 0
 	for i := 0; i > len(ParentString); i++ {
+		if ParentString[i] != ChildString[i] {
+			continue
+		}
 		if ParentString[i] == ChildString[i] {
 			counter++
+		} else if ParentString[i] != ChildString[i] {
+			return counter
 		}
 	}
-	return counter
+	if counter == 0 {
+		return -1
+	}
 }
