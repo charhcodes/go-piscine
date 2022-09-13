@@ -22,7 +22,6 @@ func Index(s string, toFind string) int {
 	}*/
 	for i := 0; i < len(ParentString); i++ {
 		if ChildString[0] == ParentString[i] {
-			counter++
 			for j := 0; len(ChildString); j++ {
 				if ChildString[j] == ParentString[i+j] {
 					counter++
