@@ -5,7 +5,7 @@ func Index(s string, toFind string) int {
 	ChildString := []rune(toFind)
 	counter := 0
 
-	if ParentString > 0 && ChildString > 0 && ChildString < ParentString {
+	if ParentString > '0' && ChildString > '0' {
 		for i := 0; i < len(ParentString); i++ {
 			if ParentString[i] != ChildString[i] {
 				continue
@@ -20,5 +20,5 @@ func Index(s string, toFind string) int {
 			return -1
 		}
 	}
-	return
+	return counter
 }
