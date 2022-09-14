@@ -9,7 +9,7 @@ func Capitalize(s string) string {
 	}
 
 	for i := 1; i < len(StringRune); i++ {
-		if StringRune[i-1] == 32 || !IsAlpha(string(StringRune[i-1])) {
+		if StringRune[i-1] == ' ' || !IsAlpha(string(StringRune[i-1])) {
 			if IsLower(string(StringRune[i])) {
 				StringRune[i] = StringRune[i] + converter
 			}
