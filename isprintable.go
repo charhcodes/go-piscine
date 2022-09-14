@@ -1,6 +1,6 @@
 package piscine
 
-func IsNumeric(s string) bool {
+func IsPrintable(s string) bool {
 	runeString := []rune(s)
 
 	for i := 0; i < len(s); i++ {
