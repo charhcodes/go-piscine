@@ -9,5 +9,5 @@ func ToUpper(s string) string {
 			continue
 		}
 	}
-	return
+	return s
 }
