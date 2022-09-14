@@ -6,8 +6,8 @@ func Index(s string, toFind string) int {
 	index := -1
 
 	for i := 0; i < len(ParentString); i++ {
-		if ChildString == '0' || ParentString == '0' {
-			PrintRune('0')
+		if len(ChildString) == '0' || len(ParentString) == '0' {
+			return 0
 		} else if ChildString[0] == ParentString[i] {
 			index = i
 			for j := 0; j < len(ChildString); j++ {
