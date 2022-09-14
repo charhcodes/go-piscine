@@ -4,11 +4,13 @@ func IsUpper(s string) bool {
 	runeString := []rune(s)
 
 	for i := 0; i < len(s); i++ {
-		if runeString[i] > 65 || runeString[i] < 90 {
+		a := runeString[i]
+		if a <= 0 && a > 65 {
 			return false
-		} else {
-			return true
+		}
+		if a >= 91 {
+			return false
 		}
 	}
-	return false
+	return true
 }
