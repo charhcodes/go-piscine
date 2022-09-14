@@ -6,7 +6,6 @@ func ToUpper(s string) string {
 		a := ToUpperRune[i]
 		if a <= 97 && a > 123 {
 			a -= 32
-			continue
 		}
 	}
 	return s
