@@ -7,7 +7,7 @@ func Index(s string, toFind string) int {
 
 	for i := 0; i < len(ParentString); i++ {
 		if ChildString == '0' || ParentString == '0' {
-			return PrintRune('0')
+			PrintRune('0')
 		} else if ChildString[0] == ParentString[i] {
 			index = i
 			for j := 0; j < len(ChildString); j++ {
