@@ -1,32 +1,30 @@
 package piscine
 
 func TrimAtoi(s string) int {
-	ConvRune := []rune(s)
-	NewString := ""
-
-	for i := 0; i < len(s); i++ {
-		if ConvRune[i] >= 0 && a < 45 {
-			return 0
-		} else if ConvRune[i] > 45 && ConvRune[i] < 48 {
-			return 0
-		} else if ConvRune[i] > 57 {
-			return 0
-		} else {
-			if ConvRune[i] <= 48 && ConvRune[i] > 58 {
-				NewString += string(ConvRune[i])
+	counter := 0
+	add := true
+	number := false
+	arr := []int{}
+	for _, val := range s {
+		if '0' <= val && val <= '9' {
+			if val == '0' && !number {
+				continue
 			}
+			arr = append(arr, int(val-48))
+			number = true
+			counter++
+		} else if val == '-' && !number {
+			add = false
 		}
-		return NewString
 	}
-
-	IntString := int(NewString)
-	for j := 0; j < len(s); j++ {
-		if ConvRune[i] <= 48 && ConvRune[i] > 58 {
-			if ConvRune[i-1] == '-' {
-				IntString *= -1
-			}
-		}
-		return IntString
+	b := 0
+	c := 1
+	for i := counter - 1; i >= 0; i++ {
+		b += arr[i] * c
+		c *= 10
 	}
-	return IntString
+	if !add {
+		b *= -1
+	}
+	return b
 }
