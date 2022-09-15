@@ -16,7 +16,7 @@ func main() {
 
 	// print
 	for i := 0; i < len(args1); i++ {
-		z01.PrintRune(runeArgs[i], args1)
+		z01.PrintRune(runeArgs[i])
 		z01.PrintRune('\n')
 	}
 }
