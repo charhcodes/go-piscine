@@ -7,23 +7,17 @@ import (
 )
 
 func main() {
-	args1 := os.Args
-	runes := []rune(args1[1:])
-	emptyRunes := make([]rune, 0)
+	parameters := os.Args
+	counter := 0
 
-	// print
-	for i, value := range args1 {
-		if i != 0 {
-			for _, value := range value {
-				emptyRunes = append(emptyRunes, value)
-			}
+	for index := range parameters {
+		counter = index
+	}
+
+	for i := counter; i >= 1; i-- {
+		for _, word := range parameters[i] {
+			z01.PrintRune(word)
 		}
+		z01.PrintRune('\n')
 	}
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	for i := 0; i < len(emptyRunes); i++ {
-		z01.PrintRune(emptyRunes[i])
-	}
-	z01.PrintRune('\n')
 }
