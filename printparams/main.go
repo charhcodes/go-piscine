@@ -14,7 +14,7 @@ func main() {
 
 	// print
 	for index, value := range args1 {
-		if i != 0 {
+		if index != 0 {
 			for index, value := range value {
 				z01.PrintRune(value)
 			}
