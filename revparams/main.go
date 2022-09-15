@@ -8,7 +8,7 @@ import (
 
 func main() {
 	args1 := os.Args
-	runes := []rune(args1)
+	runes := []rune(args1[1:])
 	emptyRunes := make([]rune, 0)
 
 	// print
