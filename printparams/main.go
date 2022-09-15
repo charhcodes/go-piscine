@@ -9,14 +9,16 @@ import (
 func main() {
 	// program name
 	// args1 := os.Args[0]
-
 	// command line arguments
-	args1 := os.Args[1:]
-	runeArgs := []rune(args1[0])
+	args1 := os.Args
 
 	// print
-	for i := 0; i < len(args1); i++ {
-		z01.PrintRune(runeArgs[i])
-		z01.PrintRune('\n')
+	for index, value := range args1 {
+		if i != 0 {
+			for index, value := range value {
+				z01.PrintRune(value)
+			}
+			z01.PrintRune('\n')
+		}
 	}
 }
