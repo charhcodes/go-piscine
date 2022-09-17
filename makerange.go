@@ -5,9 +5,7 @@ func MakeRange(min, max int) []int {
 	for i := range a {
 		for i = min; i < max; i++ {
 			a[i] = min + i
-		} else if max == 9223372036854775807 {
-			return nil
-		} else if min <= max {
+		} if max == 9223372036854775807 {
 			return nil
 		}
 	}
