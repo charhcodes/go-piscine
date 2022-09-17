@@ -1,0 +1,9 @@
+package piscine
+
+func MakeRange(min, max int) []int {
+	size := make([]int, size)
+	for i := min; i < max; i++ {
+		size[i] = i + 1
+	}
+	return size
+}
