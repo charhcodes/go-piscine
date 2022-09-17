@@ -1,9 +1,9 @@
 package piscine
 
 func MakeRange(min, max int) []int {
-	size := make([]int, max)
-	for i := min; i < max; i++ {
-		size[i] = i + 1
+	size := make([]int, max-min)
+	for i := range size {
+		size[i] = min + i
 	}
 	return size
 }
