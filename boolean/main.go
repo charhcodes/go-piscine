@@ -96,7 +96,7 @@ func TrimAtoi(s []string) int {
 	k := 1
 	l := 0
 	for _, a := range s {
-		if a >= '0' && a <= '9' {
+		if a >= 0 && a <= 9 {
 			b := int(a - 48)
 			l = l*10 + b
 		} else if a == '-' && l == 0 {
