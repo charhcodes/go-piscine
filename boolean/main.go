@@ -23,13 +23,12 @@ func isEven(nbr int) bool {
 	}
 }
 
-/*
-func TrimAtoi(a []string) {
+func TrimAtoi(s string) int {
 	counter := 0
 	add := true
 	number := false
 	arr := []int{}
-	for _, val := range a {
+	for _, val := range s {
 		if '0' <= val && val <= '9' {
 			if val == '0' && !number {
 				continue
@@ -50,12 +49,12 @@ func TrimAtoi(a []string) {
 	if !add {
 		b *= -1
 	}
+	return b
 }
-*/
 
 func main() {
 	a := os.Args[1:]
-	lengthOfArg := []int(a)
+	lengthOfArg := TrimAtoi(a)
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
 	if isEven(lengthOfArg) {
