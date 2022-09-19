@@ -4,8 +4,6 @@ import (
 	"os"
 
 	"github.com/01-edu/z01"
-
-	"piscine"
 )
 
 func printStr(s string) {
@@ -25,7 +23,7 @@ func isEven(nbr int) bool {
 	}
 }
 
-func TrimAtoi(s string) {
+func TrimAtoi(a []string) {
 	counter := 0
 	add := true
 	number := false
@@ -55,7 +53,8 @@ func TrimAtoi(s string) {
 
 func main() {
 	a := os.Args[1:]
-	lengthOfArg := piscine.TrimAtoi(a)
+	var lengthOfArg string
+	lengthOfArg = TrimAtoi(a)
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
 	if isEven(lengthOfArg) {
