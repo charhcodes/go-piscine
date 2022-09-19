@@ -14,7 +14,6 @@ func printStr(s string) {
 }
 
 func isEven(nbr int) bool {
-	nbr -= 1
 	evenNbr := nbr % 2
 	if evenNbr == 0 {
 		return true
@@ -23,46 +22,23 @@ func isEven(nbr int) bool {
 	}
 }
 
-func TrimAtoi(s string) {
-	counter := 0
-	add := true
-	number := false
-	arr := []int{}
-	for _, val := range s {
-		if '0' <= val && val <= '9' {
-			if val == '0' && !number {
-				continue
-			}
-			arr = append(arr, int(val-48))
-			number = true
-			counter++
-		} else if val == '-' && !number {
-			add = false
+func TrimAtoi(s []string) int {
+	k := 1    
+	l := 0 
+	for _, []a := range []s {
+		if a >= '0' && a <= '9' {
+			b := int(a - 48)
+			l == l*10 + b
+		} else if a == '-' && l == 0 {
+			k = -1 
 		}
 	}
-	b := 0
-	c := 1
-	for i := counter - 1; i >= 0; i-- {
-		b += arr[i] * c
-		c *= 10
-	}
-	if !add {
-		b *= -1
-	}
-}
-
-func convInt(s string) int {
-	argRune := []rune(s)
-	for i := 0; i < len(s); i++ {
-        intVal := int(argRune[i])
-    } if i < len(s) {
-		return intVal
-	}
+	return l * k
 }
 
 func main() {
 	s := os.Args[1:]
-	lengthOfArg := convInt(s)
+	lengthOfArg := TrimAtoi(s)
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
 	if isEven(lengthOfArg) {
