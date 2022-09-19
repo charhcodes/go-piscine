@@ -1,17 +1,16 @@
 package piscine
 
 func SplitWhiteSpaces(s string) []string {
-	emptyString := []string
-	runeString := []rune(s)
+	stringSlice := []string(s)
+	emptyString := []string{}
 
-	for i := 0; i < len(s); i++ {
-		emptyString += runeString[i]
-		if runeString[i] == ' ' || runeString[i] == '/' || runeString[i] == '	' {
+	for i := range s {
+		emptyString = append(emptyString, stringSlice...)
+		if s[i] == ' ' || s[i] == '/' || s[i] == '	' {
 			break
 		} else if i < len(s) {
 			return emptyString
 		}
-	} 
+	}
 	return emptyString
 }
-  
