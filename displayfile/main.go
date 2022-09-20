@@ -6,6 +6,15 @@ import (
 )
 
 func main() {
+	arguments := os.Args
+	if len(arguments) > 2 {
+		fmt.Println("Too many arguments")
+		return
+	} else if len(arguments) == 1 {
+		fmt.Println("File name missing")
+		return
+	}
+
 	file, err := os.Open("quest8.txt") // opens files within os, cannot take multiple values usually
 	if err != nil {
 		fmt.Printf("")
