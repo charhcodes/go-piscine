@@ -68,7 +68,7 @@ func main() {
 }
 */
 
-package piscine
+package main
 
 import (
 	"os"
@@ -86,30 +86,14 @@ func printStr(s string) {
 func isEven(nbr int) bool {
 	evenNbr := nbr % 2
 	if evenNbr == 0 {
-		return true
-	} else {
 		return false
+	} else {
+		return true
 	}
-}
-
-func TrimAtoi(s []string) int {
-	k := 1
-	l := 0
-	for _, a := range s {
-		if a >= 0 && a <= 9 {
-			b := int(a - 48)
-			l = l*10 + b
-		} else if a == '-' && l == 0 {
-			k = -1
-		}
-	}
-	return l * k
 }
 
 func main() {
-	arguments := os.Args[1:]
-	lengthOfArg := TrimAtoi(arguments)
-
+	lengthOfArg := len(os.Args)
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
 	if isEven(lengthOfArg) {
