@@ -15,5 +15,5 @@ func CountIf(f func(string) bool, tab []string) int {
 			return len(tab)
 		}
 	}
-	return len(tab)
+	return 0
 }
