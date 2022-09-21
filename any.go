@@ -1,7 +1,7 @@
-package main
+package piscine
 
 func Any(f func(string) bool, a []string) bool {
-	for i, v := range a {
+	for _, v := range a {
 		if f(v) {
 			return true
 		}
