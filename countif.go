@@ -10,10 +10,11 @@ func CountIf(f func(string) bool, tab []string) int {
 } */
 
 func CountIf(f func(string) bool, tab []string) int {
+	counter := 0
 	for _, v := range tab {
 		if f(v) {
-			return len(tab)
+			counter++
 		}
 	}
-	return 0
+	return counter
 }
