@@ -1,4 +1,4 @@
-package main
+/*package piscine
 
 func one(nbr int) int {
 	return nbr + 1
@@ -27,4 +27,13 @@ func six(nbr int) int {
 func ForEach(f func(int), a []int) {
 	a = []func(int) int{one, two, three, four, five, six}
 	return a
+}
+*/
+
+package piscine
+
+func ForEach(f func(int), a []int) {
+	for _, i := range a {
+		f(i)
+	}
 }
