@@ -6,8 +6,8 @@ func Enigma(a ***int, b *int, c *******int, d ****int) {
 	pointerC := *******c
 	pointerD := ****d
 
-	pointerA = *******c
-	pointerB = a***
-	pointerC = ****d
-	pointerD = *b
+	*******c = pointerA
+	a*** = pointerB
+	****d = pointerC
+	*b = pointerD
 }
