@@ -2,7 +2,6 @@ package piscine
 
 func Rot14(s string) string {
 	runeString := []rune(s)
-	emptyString := ""
 
 	for i := 0; i < len(s); i++ {
 		if (runeString[i] >= 65 && runeString[i] <= 76) || (runeString[i] >= 97 && runeString[i] <= 108) {
@@ -12,12 +11,11 @@ func Rot14(s string) string {
 			runeString[i] -= 12
 		}
 		if runeString[i] == 90 {
-			runeString[i] == 78
+			runeString[i] -= 12
 		}
 		if runeString[i] == 122 {
-			runeString[i] == 110
+			runeString[i] -= 12
 		}
-		emptyString[i] += runeString[i]
 	}
-	return emptyString
+	return string(runeString)
 }
