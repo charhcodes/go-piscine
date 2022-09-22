@@ -34,10 +34,11 @@ func main() {
 func main() {
 	for len(os.Args) == 2 {
 		number, err := strconv.Atoi(os.Args[1])
-		test := IsPowerOfTwo(number)
 		if err != nil {
 			panic(err)
-		} else if test == 0 {
+		}
+		test := IsPowerOfTwo(number)
+		if test == 0 {
 			PrintStr("true\n")
 			break
 		} else {
@@ -45,17 +46,13 @@ func main() {
 			break
 		}
 	}
-	for len(os.Args) != 2 {
-		return
-	}
 }
 
 func IsPowerOfTwo(n int) int {
 	if n == 0 {
 		return 1
-	} else {
-		return n & (n - 1)
 	}
+	return n & (n - 1)
 }
 
 func PrintStr(s string) {
