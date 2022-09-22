@@ -1,10 +1,11 @@
-package piscine
+package main
 
 import (
 	"fmt"
 	"os"
 )
 
+/*
 func comcheck() {
 	arguments := os.Args
 	stringSlice := []string(arguments)
@@ -19,5 +20,21 @@ func comcheck() {
 		} else {
 			return
 		}
+	}
+}*/
+
+func main() {
+	stringTargets := []string{"01", "galaxy", "galaxy 01"}
+	alert := false
+
+	for i := 1; i < len(os.Args); i++ {
+		for j := 0; j < 3; j++ { // 3 represents number of stringtargets ie. 2 = galaxy
+			if os.Args[i] == stringTargets[j] {
+				alert = true
+			}
+		}
+	}
+	if alert {
+		fmt.Println("Alert!!!")
 	}
 }
