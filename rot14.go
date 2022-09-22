@@ -7,9 +7,7 @@ func Rot14(s string) string {
 		// A - L inclusive
 		if (runeString[i] >= 65 && runeString[i] <= 76) || (runeString[i] >= 97 && runeString[i] <= 108) {
 			runeString[i] += 14
-		}
-		// M - Z inclusive
-		if (runeString[i] > 76 && runeString[i] <= 90) || (runeString[i] > 108 && runeString[i] <= 122) {
+		} else if (runeString[i] > 76 && runeString[i] <= 90) || (runeString[i] > 108 && runeString[i] <= 122) {
 			runeString[i] -= 12
 		}
 	}
