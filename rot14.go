@@ -21,5 +21,5 @@ func Rot14(s string) string {
 			runeString[i] == 110
 		}
 	}
-	return emptyString += runeString[i]
+	return emptyString[i] += runeString[i]
 }
