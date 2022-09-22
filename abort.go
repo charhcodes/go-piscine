@@ -8,7 +8,7 @@ func Abort(a, b, c, d, e int) int {
 
 func Sort(medSlice []int) {
 	for i := 0; i < len(medSlice); i++ {
-		for j := i; i < len(medSlice); j++ {
+		for j := 0; i < len(medSlice); j++ {
 			if medSlice[j] > medSlice[i] {
 				medSlice[i], medSlice[j] = medSlice[j], medSlice[i]
 			}
