@@ -4,7 +4,7 @@ import "github.com/01-edu/z01"
 
 func Rot14(s string) string {
 	runeString := []rune(s)
-	emptyString := []string
+	emptyString := ""
 
 	for i := 0; i < len(s); i++ {
 		if (runeString[i] >= 65 && runeString[i] <= 76) || (runeString[i] >= 97 && runeString[i] <= 108) {
