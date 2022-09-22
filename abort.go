@@ -6,9 +6,7 @@ func Abort(a, b, c, d, e int) int {
 	for i := 0; i < len(medSlice); i++ {
 		for j := i; i < len(medSlice); j++ {
 			if medSlice[i] > medSlice[j] {
-				z := medSlice[i]
-				medSlice[i] = medSlice[j]
-				medSlice[j] = z
+				medSlice[i], medSlice[j] = medSlice[j], medSlice[i]
 			}
 		}
 	}
